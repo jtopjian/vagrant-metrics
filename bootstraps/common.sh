@@ -12,7 +12,7 @@ sed -i "2i127.0.1.1 ${HOSTNAME}.example.com ${HOSTNAME}" /etc/hosts
 
 echo " ===> Installing base packages"
 apt-get update
-apt-get install -y curl wget git ruby2.0
+apt-get install -y curl wget git ruby
 
 echo " ===> Installing the Puppetlabs apt repo"
 wget https://apt.puppetlabs.com/puppetlabs-release-trusty.deb
