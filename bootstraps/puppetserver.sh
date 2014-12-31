@@ -1,11 +1,5 @@
 #!/bin/bash
 
-echo " ===> Installing OpenStack tools"
-apt-get install -y python-pip python-dev
-pip install netifaces
-pip install python-novaclient
-pip install python-glanceclient
-
 echo " ===> Installing tmux"
 apt-get install -y tmux
 
@@ -54,7 +48,3 @@ puppet agent -t
 
 echo " ===> symlinking site.pp"
 ln -s /etc/puppet/modules/site/manifests/site.pp /etc/puppet/manifests/
-
-echo " ===> Cloning vagrant repo"
-cd /root
-git clone https://github.com/jtopjian/vagrant-metrics

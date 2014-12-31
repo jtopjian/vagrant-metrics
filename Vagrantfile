@@ -38,7 +38,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vm.vm.provision 'shell', inline: "echo role=puppet_master > /etc/facter/facts.d/role.txt"
     vm.vm.provision 'shell', inline: "echo location=yyc > /etc/facter/facts.d/location.txt"
     vm.vm.provision 'shell', path: 'bootstraps/puppetserver.sh'
-    vm.vm.provision 'shell', path: 'bootstraps/install-vagrant.sh'
     vm.vm.provider :openstack do |os|
       os.keypair_name = 'home'
     end
