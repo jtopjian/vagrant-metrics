@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo " ===> Installing Puppet"
-apt-get install -y puppet=3.6.2-1puppetlabs1 puppet-common=3.6.2-1puppetlabs1
+apt-get install -y puppet
 
 echo " ===> Configure Puppet"
 sed -i '/templatedir/d' /etc/puppet/puppet.conf
