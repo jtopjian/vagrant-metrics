@@ -58,8 +58,7 @@ mod 'redis',
   :git => 'https://github.com/jtopjian/puppet-redis'
 
 mod 'site',
-  :git => 'https://github.com/jtopjian/puppet-site',
-  :ref => 'fcarbon'
+  :git => 'https://github.com/jtopjian/puppet-site-metrics'
 
 mod 'sshkeys',
   :git => 'https://github.com/jtopjian/puppet-sshkeys'
