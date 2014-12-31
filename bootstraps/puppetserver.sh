@@ -47,6 +47,6 @@ echo include puppetdb::master::config >> pdb.pp
 puppet apply --verbose pdb.pp
 rm pdb.pp
 
-#echo " ===> Installing Puppet Master Role"
-#puppet apply --verbose /etc/puppet/modules/site/manifests/site.pp
-#puppet agent -t
+echo " ===> Installing Puppet Master Role"
+puppet apply --verbose /etc/puppet/modules/site/manifests/site.pp
+puppet agent -t

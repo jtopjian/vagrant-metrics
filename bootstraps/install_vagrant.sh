@@ -6,5 +6,6 @@ dpkg -i vagrant*.deb
 rm vagrant*.deb
 vagrant plugin install vagrant-openstack-plugin
 vagrant box add dummy https://github.com/cloudbau/vagrant-openstack-plugin/raw/master/dummy.box
+vagrant plugin install vagrant-hostmanager
 
 exit 0
