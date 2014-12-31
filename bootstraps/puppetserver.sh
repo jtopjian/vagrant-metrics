@@ -2,7 +2,7 @@
 
 echo " ===> Installing OpenStack tools"
 apt-get install -y python-pip python-dev
-pip install netifances
+pip install netifaces
 pip install python-novaclient
 pip install python-glanceclient
 
