@@ -18,7 +18,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     os.flavor          = 'm1.small'
     os.image           = 'Ubuntu 14.04'
     os.endpoint        = "#{ENV['OS_AUTH_URL']}/tokens"
-    os.keypair_name    = 'metrics'
+    os.keypair_name    = 'launchpad'
     os.ssh_username    = 'ubuntu'
     os.security_groups = ['default', 'openstack']
     os.address_id      = 'cybera'
@@ -38,9 +38,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vm.vm.provision 'shell', inline: "echo role=puppet_master > /etc/facter/facts.d/role.txt"
     vm.vm.provision 'shell', inline: "echo location=yyc > /etc/facter/facts.d/location.txt"
     vm.vm.provision 'shell', path: 'bootstraps/puppetserver.sh'
-    vm.vm.provider :openstack do |os|
-      os.keypair_name = 'home'
-    end
   end
 
   config.vm.define 'rabbitmq' do |vm|

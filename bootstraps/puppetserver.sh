@@ -45,6 +45,3 @@ rm pdb.pp
 echo " ===> Installing Puppet Master Role"
 puppet apply --verbose /etc/puppet/modules/site/manifests/site.pp
 puppet agent -t
-
-echo " ===> symlinking site.pp"
-ln -s /etc/puppet/modules/site/manifests/site.pp /etc/puppet/manifests/
