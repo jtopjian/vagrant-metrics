@@ -54,3 +54,7 @@ puppet agent -t
 
 echo " ===> symlinking site.pp"
 ln -s /etc/puppet/modules/site/manifests/site.pp /etc/puppet/manifests/
+
+echo " ===> Cloning vagrant repo"
+cd /root
+git clone https://github.com/jtopjian/vagrant-metrics
